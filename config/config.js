@@ -1,12 +1,10 @@
- 
 // module.exports ={
-//     mongoURI : 'mongodb+srv://KrishanSharma:Northwest@123@cluster0-briyc.mongodb.net/?retryWrites=true&w=majority'
+//     mongoURI : 'mongodb+srv:etc'
 
 // };
 
 require("dotenv").config();
 
-module.exports ={
-
-mongoURI : process.env.MONGO_DB
+module.exports = {
+  mongoURI: process.env.MONGODB_URI,
 };

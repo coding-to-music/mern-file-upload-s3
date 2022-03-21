@@ -1,3 +1,9 @@
+# MERN file upload S3
+
+By Krishan Sharma https://github.com/Krishan27
+
+https://github.com/Krishan27/MERN_FILE_UPLOAD_AWS_S3
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
