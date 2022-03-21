@@ -5,19 +5,21 @@ import axios from "axios";
 
 class FileUpload extends Component {
   state = {
-    documents: []
+    documents: [],
   };
 
-  deleteDocument = id => {
+  deleteDocument = (id) => {
     axios.delete("/api/document/" + id).then(() => {
       this.setState({
-        documents: this.state.documents.filter(document => document._id !== id)
+        documents: this.state.documents.filter(
+          (document) => document._id !== id
+        ),
       });
     });
   };
 
   componentDidMount() {
-    axios.get("/api/document").then(res => {
+    axios.get("/api/document").then((res) => {
       this.setState({ documents: res.data });
     });
   }
@@ -38,12 +40,16 @@ class FileUpload extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {this.state.documents.map(document => (
+                    {this.state.documents.map((document) => (
                       <tr>
                         <td>{document.document_id}</td>
                         <td>{document.description}</td>
                         <td>
-                          <a href={document.fileLink} target="_blank">
+                          <a
+                            href={document.fileLink}
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
                             View File
                           </a>
                         </td>
