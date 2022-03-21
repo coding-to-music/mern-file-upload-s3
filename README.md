@@ -8,6 +8,12 @@ By Krishan Sharma https://github.com/Krishan27
 
 https://github.com/Krishan27/MERN_FILE_UPLOAD_AWS_S3
 
+## Document Upload does not work
+
+This is called by a button on the main page.
+
+http://localhost:3000/api/document/upload
+
 ## local setup
 
 ```java
@@ -41,41 +47,27 @@ Output:
 [0]   Line 45:13:  'description' is assigned a value but never used   no-unused-vars
 [0]   Line 45:26:  'selectedFile' is assigned a value but never used  no-unused-vars
 [0]
-[0] ./src/components/FileUpload.js
-[0]   Line 46:55:  Using target="_blank" without rel="noopener noreferrer" is a security risk: see https://mathiasbynens.github.io/rel-noopener  react/jsx-no-target-blank
+[0] Search for the keywords to learn more about each warning.
+[0] To ignore, add // eslint-disable-next-line to the line before.
 ```
 
-## Error I am getting on Heroku
+## Heroku logging
 
 ```java
-2022-03-21T07:21:51.000000+00:00 app[api]: Build succeeded
-2022-03-21T07:21:59.934782+00:00 heroku[web.1]: Starting process with command `npm start`
-2022-03-21T07:22:01.609173+00:00 app[web.1]:
-2022-03-21T07:22:01.609203+00:00 app[web.1]: > mern-file-upload-s3@0.1.0 start
-2022-03-21T07:22:01.609203+00:00 app[web.1]: > react-scripts start
-2022-03-21T07:22:01.609203+00:00 app[web.1]:
-2022-03-21T07:22:03.526805+00:00 app[web.1]: ℹ ｢wds｣: Project is running at http://172.17.208.118/
-2022-03-21T07:22:03.526967+00:00 app[web.1]: ℹ ｢wds｣: webpack output is served from
-2022-03-21T07:22:03.527102+00:00 app[web.1]: ℹ ｢wds｣: Content not from webpack is served from /app/public
-2022-03-21T07:22:03.527151+00:00 app[web.1]: ℹ ｢wds｣: 404s will fallback to /
-2022-03-21T07:22:03.527268+00:00 app[web.1]: Starting the development server...
-2022-03-21T07:22:03.527269+00:00 app[web.1]:
-2022-03-21T07:22:03.683352+00:00 heroku[web.1]: Process exited with status 0
-2022-03-21T07:22:03.738166+00:00 heroku[web.1]: State changed from starting to crashed
-2022-03-21T07:22:03.746741+00:00 heroku[web.1]: State changed from crashed to starting
-2022-03-21T07:22:12.211716+00:00 heroku[web.1]: Starting process with command `npm start`
-2022-03-21T07:22:13.671041+00:00 app[web.1]:
-2022-03-21T07:22:13.671057+00:00 app[web.1]: > mern-file-upload-s3@0.1.0 start
-2022-03-21T07:22:13.671057+00:00 app[web.1]: > react-scripts start
-2022-03-21T07:22:13.671057+00:00 app[web.1]:
-2022-03-21T07:22:15.618915+00:00 app[web.1]: ℹ ｢wds｣: Project is running at http://172.16.46.178/
-2022-03-21T07:22:15.619117+00:00 app[web.1]: ℹ ｢wds｣: webpack output is served from
-2022-03-21T07:22:15.619244+00:00 app[web.1]: ℹ ｢wds｣: Content not from webpack is served from /app/public
-2022-03-21T07:22:15.619295+00:00 app[web.1]: ℹ ｢wds｣: 404s will fallback to /
-2022-03-21T07:22:15.619419+00:00 app[web.1]: Starting the development server...
-2022-03-21T07:22:15.619420+00:00 app[web.1]:
-2022-03-21T07:22:15.782648+00:00 heroku[web.1]: Process exited with status 0
-2022-03-21T07:22:15.858244+00:00 heroku[web.1]: State changed from starting to crashed
+2022-03-21T07:44:49.000000+00:00 app[api]: Build succeeded
+2022-03-21T07:44:52.326095+00:00 heroku[web.1]: Starting process with command `npm start`
+2022-03-21T07:44:54.620324+00:00 app[web.1]:
+2022-03-21T07:44:54.620335+00:00 app[web.1]: > mern-file-upload-s3@0.1.0 start
+2022-03-21T07:44:54.620335+00:00 app[web.1]: > react-scripts start && node ./bin/www
+2022-03-21T07:44:54.620336+00:00 app[web.1]:
+2022-03-21T07:44:58.326816+00:00 app[web.1]: ℹ ｢wds｣: Project is running at http://172.16.97.90/
+2022-03-21T07:44:58.327216+00:00 app[web.1]: ℹ ｢wds｣: webpack output is served from
+2022-03-21T07:44:58.327495+00:00 app[web.1]: ℹ ｢wds｣: Content not from webpack is served from /app/public
+2022-03-21T07:44:58.327589+00:00 app[web.1]: ℹ ｢wds｣: 404s will fallback to /
+2022-03-21T07:44:58.327780+00:00 app[web.1]: Starting the development server...
+2022-03-21T07:44:58.327781+00:00 app[web.1]:
+2022-03-21T07:44:59.605984+00:00 app[web.1]: MongoDB Connected...
+2022-03-21T07:44:59.853524+00:00 heroku[web.1]: State changed from starting to up
 ```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
